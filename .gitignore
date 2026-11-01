@@ -1,0 +1,12 @@
+# Object files
+*.o
+
+# Executables
+out
+
+# Local database files
+student.data
+student.dat
+
+# Editor temporary files
+*.swp
