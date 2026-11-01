@@ -1,3 +1,4 @@
+
 #include"header.h"
 void delete_student(list**ptr)
 {
@@ -27,6 +28,17 @@ void delete_student(list**ptr)
 						if(search_id==current->id)
 						{
 							id_flag=1;
+
+							// DELETION CONFIRMATION
+							char confirm;
+							printf("Are you sure you want to delete %s (ID: %d)? (y/n): ",current->name,current->id);
+							scanf(" %c",&confirm);
+							if(confirm!='y' && confirm!='Y')
+							{
+								printf("Deletion cancelled.\n");
+								return;
+							}
+
 							if(current==(*ptr))
 							{
 								(*ptr)=current->next;
@@ -93,6 +105,17 @@ void delete_student(list**ptr)
 						if((current->id==delete_id) && (strcmp(current->name,search_name))==0)
 						{
 							name_flag=1;
+
+							// DELETION CONFIRMATION
+							char confirm;
+							printf("Are you sure you want to delete %s (ID: %d)? (y/n): ",current->name,current->id);
+							scanf(" %c",&confirm);
+							if(confirm!='y' && confirm!='Y')
+							{
+								printf("Deletion cancelled.\n");
+								return;
+							}
+
 							if(current==(*ptr))
 							{
 							(*ptr)=current->next;
